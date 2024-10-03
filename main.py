@@ -88,7 +88,7 @@ def process_videos(video_path1, video_path2):
     print(f"Average MSE: {avg_mse}")
     print(f"Average Histogram Similarity: {avg_histogram}")
 
-    if avg_ssim > 0.9:
+    if avg_ssim > 0.9 and avg_histogram > 0.9:
         print("Same videos.")
     else:
         print("Different videos")
