@@ -3,7 +3,7 @@ import numpy as np
 from skimage.metrics import structural_similarity as ssim
 
 # Function to compute SSIM between two frames
-def compute_ssim(frameA, frameB):/Users/bingqian/PycharmProjects/Similarity Detector/venv/main.py
+def compute_ssim(frameA, frameB):
     try:
         # Convert frames to grayscale
         grayA = cv2.cvtColor(frameA, cv2.COLOR_BGR2GRAY)
@@ -31,7 +31,7 @@ def compute_histogram_similarity(frameA, frameB):
     histA = cv2.normalize(histA, histA).flatten()
     histB = cv2.normalize(histB, histB).flatten()
     # Compare histograms using correlation
-    return cv2.compareHist(histA, histB, cv2.HISTCMP_CORREL)dasd
+    return cv2.compareHist(histA, histB, cv2.HISTCMP_CORREL)
 
 
 # Main function to process the videos
